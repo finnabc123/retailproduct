@@ -1,0 +1,214 @@
+@import "./../../assets/scss/variables";
+
+.mat-drawer-container {
+  background: none;
+}
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.example-toolbar {
+  position: fixed;
+  z-index: 2;
+}
+h1.example-app-name {
+  margin-left: 8px;
+}
+.example-sidenav-container {
+  flex: 1;
+  height: 100% !important;
+}
+.example-sidenav-container {
+  flex: 1 0 auto;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.active-route-link {
+  color: #3f51b5;
+}
+.active-route-link,
+.mat-list-item-focus {
+  background: $primaryGradient !important;
+  color: #fff !important;
+  border-radius: 3px;
+  box-shadow: $colorShadow;
+}
+.active-route-link:hover {
+  color: #000;
+}
+.mat-toolbar-multiple-rows {
+  min-height: 50px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+.mat-toolbar-row {
+  height: 50px;
+}
+.mat-sidenav {
+  background-color: #fff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  padding: 0 10px;
+}
+.mat-list-item,
+.mat-nav-list {
+  height: 40px !important;
+  line-height: 40px !important ;
+  font-size: 12px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  .mat-icon {
+    margin-right: 5px;
+  }
+}
+.mat-nav-list .mat-list-item:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dasHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.userName {
+  width: auto;
+}
+
+.mat-drawer {
+  top: 50px;
+}
+.pt50 {
+  padding-top: 50px;
+}
+.top-header {
+  z-index: 5;
+  position: relative;
+}
+
+// Breakpoints
+$handset: 280px;
+$large-handset: 480px;
+$tablet: 640px; /* app drawer breakpoint */
+$large-tablet: 840px;
+$desktop: 960px;
+$large-desktop: 1280px;
+$x-large-desktop: 1440px;
+$xx-large-desktop: 1920px;
+
+// generate min-width breakpoint
+@mixin breakpoint($point) {
+  @media (min-width: $point) {
+    @content;
+  }
+}
+// generate max-width breakpoint (use sparingly)
+@mixin breakpoint-max($point) {
+  @media (max-width: $point) {
+    @content;
+  }
+}
+// generate min-height breakpoint
+@mixin height-breakpoint($point) {
+  @media (min-height: $point) {
+    @content;
+  }
+}
+// generate max-height breakpoint (use sparingly)
+@mixin height-breakpoint-max($point) {
+  @media (min-height: $point) {
+    @content;
+  }
+}
+
+@import "~@angular/material/theming";
+
+$app-primary: mat-palette($mat-indigo);
+$app-accent: mat-palette($mat-green);
+
+// The warn palette is optional (defaults to red).
+$app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+.top-header .mat-icon-button {
+  width: auto;
+}
+
+.mat-nav-list a.mat-list-item:hover {
+  background: #92a1eb;
+  transition: all ease 0.2s;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -ms-transition: all ease 0.2s;
+  color: #fff;
+}
+
+.mat-nav-list a.mat-list-item.active {
+  background: #92a1eb;
+  color: #fff;
+}
+
+.custum-side-nav .mat-sidenav {
+  width: 250px;
+  padding: 0;
+}
+.custum-side-nav .mat-sidenav-container {
+  // background-color: white !important;
+  min-height: 100vh;
+}
+
+.custum-side-nav .mat-list-item,
+.custum-side-nav .mat-nav-list {
+  line-height: normal !important;
+  border-radius: 0;
+}
+
+.custum-side-nav .mat-list-item {
+  font-size: 14px;
+}
+.custum-side-nav .mat-list-item,
+.custum-side-nav .mat-nav-list {
+  height: auto !important;
+  margin-bottom: auto;
+  border-radius: auto;
+}
+.custum-side-nav .mat-list-item .routeIcon.mat-icon {
+  margin-right: 10px !important;
+}
+
+.custum-side-nav .sidenav-toolbar {
+  height: 64px;
+  background-color: mat-color($app-primary);
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 600px) {
+    height: 56px;
+  }
+}
+.custum-side-nav .mat-nav-list {
+  padding-top: 0;
+}
+@include breakpoint-max(600px) {
+  .custum-side-nav .fixed-topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100% !important;
+  }
+}
+
+.version-detail {
+  background: lightgray;
+  bottom: 0;
+  position: fixed !important;
+  width: 250px;
+}
+.left-menu {
+  margin-bottom: 50px;
+}

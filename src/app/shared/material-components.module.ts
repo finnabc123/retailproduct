@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import * as materials from '@angular/material';
 
 @NgModule({
-  declarations: [],
   imports: [
     CommonModule,
     MatMomentDateModule,
@@ -60,5 +58,8 @@ import * as materials from '@angular/material';
     materials.MatTabsModule,
     materials.MatProgressBarModule
   ],
+
+  declarations: [],
+  providers: [],
 })
 export class MaterialComponentsModule { }

@@ -1,0 +1,41 @@
+<mat-toolbar color="primary" class="example-toolbar top-header">
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="appDrawer.toggle()">menu</mat-icon>
+        </button>
+        <button mat-button class="logo">
+            <img src="assets/images/thepoorplace.jpg" alt="The Poor Place">
+            <span class="company-name">The Poor Place</span> </button>
+        <span class="example-spacer"></span>
+        <div class="float-right">
+            <button mat-icon-button class="userName">
+                <mat-icon>face</mat-icon>
+                ADMIN
+                <mat-icon>person</mat-icon>
+                <em>Sign-In</em>
+                <strong>Sign-Out</strong>
+                
+            </button>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="custum-side-nav">
+    <mat-sidenav-container [hasBackdrop]="false" [ngClass]="sidebarToggle ? 'sidebar-collapse' : ''">
+        <mat-sidenav #appDrawer mode="side" [(opened)]="opened">
+            <mat-nav-list>
+                <div class="left-menu">
+                    <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
+                </div>
+                <mat-card class="version-detail fixed-bottom">
+                    <div><b>Version : 0.1</b></div>
+                </mat-card>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div class="container-fluid">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

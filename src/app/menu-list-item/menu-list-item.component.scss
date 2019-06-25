@@ -1,0 +1,22 @@
+:host {
+  display: block;
+  outline: none;
+
+  .mat-list-item.active {
+    background-color: mat-color(#673ab7, 50);
+  }
+  &:hover,
+  &:focus {
+    >.mat-list-item:not(.expanded) {
+      background-color: mat-color(#673ab7, 100) !important;
+    }
+  }
+}
+
+.mat-list-item {
+  padding: 8px 0;
+
+  .routeIcon {
+    margin-right: 40px;
+  }
+}
