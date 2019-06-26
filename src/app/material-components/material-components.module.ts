@@ -32,7 +32,8 @@ import * as materials from '@angular/material';
     materials.MatRadioModule,
     materials.MatSortModule,
     materials.MatTabsModule,
-    materials.MatProgressBarModule
+    materials.MatProgressBarModule,
+    materials.MatRippleModule
   ],
   exports: [
     materials.MatToolbarModule,
@@ -58,7 +59,8 @@ import * as materials from '@angular/material';
     materials.MatRadioModule,
     materials.MatSortModule,
     materials.MatTabsModule,
-    materials.MatProgressBarModule
+    materials.MatProgressBarModule,
+    materials.MatRippleModule
   ],
 })
 export class MaterialComponentsModule { }
