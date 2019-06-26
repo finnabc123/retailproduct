@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.categaries = [{ a: 1 }, { b: 2 }, { c: 3 }, { d: 4 }, { e: 5 }, { f: 6 }];
+    this.categaries = [{ a: 1 }, { b: 2 }, { c: 3 }];
   }
 
   abc(event) {
