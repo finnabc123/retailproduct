@@ -11,7 +11,7 @@ export class HomeComponent {
 
     public opened = true;
 
-    @ViewChild('appDrawer', {static: true}) appDrawer: ElementRef;
+    @ViewChild('appDrawer', { static: true }) appDrawer: ElementRef;
     version = VERSION;
     navItems: any[] = [
         {

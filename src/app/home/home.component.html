@@ -11,10 +11,14 @@
             <button mat-icon-button class="userName">
                 <mat-icon>face</mat-icon>
                 ADMIN
+            </button>
+            <button mat-icon-button class="userName ml-2">
                 <mat-icon>person</mat-icon>
                 <em>Sign-In</em>
+            </button>
+            <button mat-icon-button class="userName ml-2">
+                <mat-icon>person</mat-icon>
                 <strong>Sign-Out</strong>
-                
             </button>
         </div>
     </mat-toolbar-row>
@@ -28,7 +32,7 @@
                     <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
                 </div>
                 <mat-card class="version-detail fixed-bottom">
-                    <div><b>Version : 0.1</b></div>
+                    <div><b>Version : 0.001</b></div>
                 </mat-card>
             </mat-nav-list>
         </mat-sidenav>

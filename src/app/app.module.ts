@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { MaterialComponentsModule } from './material-components/material-components.module';
 import { HomeComponent } from './home/home.component';
 import { MenuListItemComponent } from './menu-list-item/menu-list-item.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    MenuListItemComponent
+    MenuListItemComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
