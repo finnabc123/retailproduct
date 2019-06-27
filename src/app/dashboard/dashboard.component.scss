@@ -1,16 +1,19 @@
 .categary-card {
-  max-width: 30%;
-  margin: 1rem 1rem 0 0;
   cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
 }
 
 .categary-header-image {
   background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
   background-size: cover;
+}
+
+.div_padding {
+  padding-bottom: 1rem;
+  margin-top: 2.5rem;
+}
+
+mat-card:hover {
+  box-shadow: red 0px 20px 20px 0px;
+  transform: translatey(-20px);
 }
